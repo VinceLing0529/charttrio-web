@@ -1,133 +1,133 @@
 {
   "module": "mindmap",
   "order_id": "LIFEDEMO1995",
-  "generated_at": "2026-11-04T10:36:46.252127",
+  "generated_at": "2026-11-12T00:08:31.065191",
   "content": {
-    "conflicting_aspects": {
+    "positive_traits": {
+      "overview": "You have a strong inner support system. In your BaZi chart, the elements that feed you are fire and earth, and you have a steady, mountain-like streak that helps you keep going. Your star chart shows a helpful star in your life area, and the reputation charge sits in your inner-peace area, giving you a calm, wise presence. In your Vedic chart, your rising sign is Virgo, ruled by Mercury, which is well placed in the 11th house of gains. This means you are practical, good with details, and people trust you with responsibility. You are the one who gets things done, and you do it with care.",
+      "plain_summary": "You are a reliable, practical person who people count on. You are good at handling details and keeping things steady. Day to day, this means you often take on responsibility and finish what you start. To make the most of this, trust your ability to follow through and let others see your steady side.",
       "details": [
         {
-          "description": "偏理性：命宫天相重条理，但月亮双鱼落七宫，遇关系议题时感性占上风",
-          "title": "理性vs感性"
+          "title": "Steady",
+          "description": "You keep going when things get hard, thanks to the strong earth streak in your chart that acts like a mountain base."
         },
         {
-          "description": "偏思考后行动：七杀透干催行动，身弱与寅申冲使她常先评估风险再出手",
-          "title": "行动vs思考"
+          "title": "Detail-Smart",
+          "description": "Your mind catches small mistakes because Mercury sits strong in your Vedic chart's house of gains."
         },
         {
-          "description": "表面独立、内里依赖认可：身宫落夫妻宫，自我评价易受伴侣与上级影响",
-          "title": "独立vs依赖"
+          "title": "Trusted",
+          "description": "People rely on you because your star chart has a supportive star in your life area, making you dependable."
         },
         {
-          "description": "偏完美：上升处女座加火星一宫，对细节的执着常压过交付速度",
-          "title": "完美vs效率"
+          "title": "Calm Presence",
+          "description": "You bring peace to tense rooms, shown by the reputation charge in your inner-peace area of the star chart."
+        },
+        {
+          "title": "Practical Helper",
+          "description": "You solve real problems because your BaZi chart has a strong fire element that fuels action."
+        },
+        {
+          "title": "Quiet Leader",
+          "description": "You lead by example, with a natural authority from the power charge in your star chart's parents area."
         }
-      ],
-      "overview": "冲突的核心是求稳与求变同体：命宫天相加禄存要秩序与体面，迁移宫廉贞破军加身宫武曲贪狼却不断制造变化的冲动；八字寅申冲、寅巳申三刑又让这种拉扯带有周期性爆发的特征。判定上，承载力决定上限：身弱意味着变的一边必须排在稳的后面，先有平台与资质托底，折腾才有正收益，否则两边互相消耗。",
-      "plain_summary": "你这个人常常是拧巴的：脑子说要稳，手却想折腾；嘴上说都行，心里特别有数。所以别人会觉得你一会儿一个样，其实你只是两边都没想好，先别急着怪自己善变。"
+      ]
     },
     "negative_tendencies": {
+      "overview": "You have some inner weather that can trip you up. In your BaZi chart, wood and metal clash, which can make you feel pulled between pushing forward and holding back. Your star chart shows the tender-spot charge in your children area, which can make you overprotective or worried about loved ones. In your Vedic chart, Saturn sits in a squeezed spot in the 6th house, which can bring stress and a tendency to overwork. These patterns are not who you are, but they are habits to watch. When you notice them, you can choose a different response.",
+      "plain_summary": "You sometimes worry too much about loved ones and take on too much work. You can feel pulled in two directions and get stressed. To handle this, set clear limits and give yourself breaks. Notice when you are overdoing it and ask for help.",
       "details": [
         {
-          "description": "官杀过重则自我要求苛刻，月干七杀透干，未达标时先责备自己",
-          "title": "自压"
+          "title": "Worrywart",
+          "description": "You fret about family because the tender-spot charge sits in your star chart's children area, making you protective."
         },
         {
-          "description": "寅申冲加三刑俱全，压力累积后易突然推翻既有安排",
-          "title": "易掀"
+          "title": "Overworker",
+          "description": "You push too hard, as Saturn in your Vedic 6th house of work and health creates pressure to keep going."
         },
         {
-          "description": "偏财藏而身弱，对机会型收入判断偏乐观，易高估自己的承载",
-          "title": "贪快"
+          "title": "Pulled Both Ways",
+          "description": "You feel torn between action and rest because your BaZi chart has a clash between wood and metal elements."
         },
         {
-          "description": "兄弟宫太阳巨门会火星陀罗，与同辈沟通易因直言起摩擦",
-          "title": "言直"
+          "title": "Self-Doubt",
+          "description": "You second-guess yourself, shown by the weak earth in your BaZi chart that makes you feel unsupported at times."
         },
         {
-          "description": "月亮落第七宫双鱼座，情绪随伴侣与合作方的状态起伏",
-          "title": "随境"
+          "title": "Harsh Self-Talk",
+          "description": "You can be hard on yourself, as the star chart's harsh star cluster in your siblings area stirs inner criticism."
         },
         {
-          "description": "正印贴身加偏印并见，想得多做得晚，启动成本长期偏高",
-          "title": "迟启"
+          "title": "Scattered Energy",
+          "description": "You sometimes spread yourself too thin because your star chart's career area is empty, making focus harder."
         }
-      ],
-      "overview": "负向倾向集中在压力代谢方式上。八字官杀三重而日主弱，最常见的模式是把外部标准内化为自我攻击；紫微兄弟宫太阳巨门会火星陀罗，与平辈、兄弟姐妹及同事的沟通容易因言辞直接起冲突；印度盘月亮落第七宫，对关系氛围过度敏感，他人情绪常被误读为针对自己。三盘共同指向：问题不在能力，在压力的出口太少。",
-      "plain_summary": "你的毛病也明显：心里不痛快不说，憋着憋着就攒成大情绪；钱上面耳根子软，熟人开口很难拒绝；压力一大还容易拿自己身体硬扛，不肯停下来歇歇。"
+      ]
     },
-    "positive_traits": {
+    "conflicting_aspects": {
+      "overview": "You have several inner tugs-of-war. Your head and heart often disagree: your BaZi chart's strong wood element pushes you to act, while your Vedic Moon in Pisces makes you feel deeply. Your action and thinking also conflict: Mars in Virgo in your Vedic chart wants to do things perfectly, but your star chart's empty career area makes you hesitate. You want to be solo but also need support: your star chart's spouse area is strong, yet your BaZi chart's self-element is weak. And you struggle between perfect and done: the perfectionism from Virgo rising fights with the practical earth in your BaZi chart that just wants results.",
+      "plain_summary": "You often feel torn between what you think and what you feel, between acting fast and thinking it through, between doing things alone and needing help, and between making things perfect and just finishing. These pulls are normal. The key is to notice which side is stronger in the moment and choose balance.",
       "details": [
         {
-          "description": "杀印相生，月干七杀得时干正印转化，压力越具体表现越稳",
-          "title": "耐压"
+          "title": "Head vs Heart",
+          "description": "Your heart often wins because your Vedic Moon in Pisces is sensitive, despite your BaZi wood pushing logic."
         },
         {
-          "description": "命宫天相会禄存，做事讲分寸，答应的事基本不掉链子",
-          "title": "守序"
+          "title": "Action vs Thinking",
+          "description": "You lean toward thinking first, as Mars in Virgo in your Vedic chart makes you plan before acting."
         },
         {
-          "description": "土星落第六宫水瓶座自宫，重复繁琐的活能长期坚持不崩盘",
-          "title": "恒毅"
+          "title": "Solo vs Supported",
+          "description": "You prefer to go solo, shown by your strong self-element in BaZi, but your star chart's spouse area craves support."
         },
         {
-          "description": "财帛宫天府坐守，对钱有数，花销与储备都习惯留余量",
-          "title": "缜密"
-        },
-        {
-          "description": "水星落十一宫狮子座，复杂问题能拆成条理讲给外行听",
-          "title": "善译"
-        },
-        {
-          "description": "福德宫文昌同宫，独处时靠阅读与钻研就能恢复状态",
-          "title": "好学"
+          "title": "Perfect vs Done",
+          "description": "You lean toward perfect, as your Virgo rising in Vedic astrology makes you detail-focused, but earth in BaZi urges completion."
         }
-      ],
-      "overview": "正向特质以秩序感与转化力为核心。八字杀印相生使压力能被学习与资质吸收，紫微命宫天相会禄存主协调与信用，印度盘上升主星水星落十一宫又使她擅长在群体中梳理信息。三者叠加，形成一种不张扬但可靠的底色：不靠爆发赢，靠不掉队赢。",
-      "plain_summary": "简单说，你是个特别能扛事、能熬的人。别人嫌烦的细活累活，你能一件件做完还不出错，而且答应的事基本说到做到，跟你共事很省心。"
+      ]
     },
     "strength_areas": {
+      "overview": "You have strong ground in certain areas. Your star chart's money area holds a stable star, giving you a knack for managing resources. Your Vedic chart's 11th house is full of planets, bringing gains through networks and friends. Your BaZi chart's fire element supports creative work and leadership. You are also good at communicating, with Mercury in Leo in your Vedic chart making you clear and persuasive. These strengths mean you can build a career in fields that use your practical skills and your ability to connect with people.",
+      "plain_summary": "You are good with money and resources, and you have a talent for communicating and connecting with people. You can succeed in jobs that need careful planning and teamwork. To grow, lean into roles that let you use your practical skills and your way with words.",
       "details": [
         {
-          "description": "适合合规、审计、运营、项目管理等重规则行业，合七杀与天相之性",
-          "title": "适合行业"
+          "title": "Best-Fit Fields",
+          "description": "You fit roles in finance or management, as your star chart's money area holds a stable star for resources."
         },
         {
-          "description": "对上恭敬得体、对下讲规矩，天相加正官正印，人际风格偏正式",
-          "title": "人际风格"
+          "title": "People Style",
+          "description": "You handle people with warmth and fairness, shown by your Vedic 11th house full of friendly planets."
         },
         {
-          "description": "先给结论再补依据，水星十一宫加文昌，表达结构感强于感染力",
-          "title": "表达方式"
+          "title": "How You Communicate",
+          "description": "You speak clearly and convincingly, thanks to Mercury in Leo in your Vedic chart's house of gains."
         },
         {
-          "description": "长于把混乱局面流程化，土星六宫与禄存同向，善收尾与兜底",
-          "title": "工作特长"
+          "title": "Work Strengths",
+          "description": "You are a steady worker who finishes tasks, as your BaZi chart's earth element gives you endurance."
         }
-      ],
-      "overview": "易发展的领域是规则密度高的地方：八字官杀印齐全、紫微天相天府成对、印度盘土星自宫于六宫，都在奖励流程、标准与长期主义。越是需要资质门槛与信用背书的行业，她的命盘折价越低；越是靠风口与人设的领域，折价越高。选赛道时先看规则，再看热度。",
-      "plain_summary": "最适合你的活儿，是那种需要耐心、细致、把烂摊子收拾干净的工作，比如流程、审核、协调、售后这类。还有一条：哄长辈和领导开心你很在行，往上沟通比跟同龄人抢更适合你。"
+      ]
     },
     "weakness_areas": {
+      "overview": "Trouble can start in a few spots. Your love life may crack because your star chart's spouse area is strong but your BaZi chart's self-element is weak, making you feel insecure. Your relationships with people can tilt because your star chart's friends area is empty, so you may give too much or too little. Your health and stress point is real: Saturn in your Vedic 6th house warns of overwork and fatigue. And your resources can drain because your star chart's property area is empty, making it hard to hold onto savings. Watch these areas and take small steps to guard them.",
+      "plain_summary": "You may struggle in love because you feel insecure, and with friends because you give unevenly. You can get worn out from stress and have trouble saving money. To guard these, communicate openly in love, set fair boundaries with friends, rest when tired, and make a simple budget.",
       "details": [
         {
-          "description": "身宫夫妻宫武曲贪狼，争执多起于钱与控制感，谈钱须提前定规矩",
-          "title": "感情破裂点"
+          "title": "Love Breaking Point",
+          "description": "You may feel insecure in love, as your BaZi self-element is weak; guard it by voicing your needs early."
         },
         {
-          "description": "兄弟宫火星陀罗同会，平级关系忌当面纠错，意见请私下书面给",
-          "title": "人际失衡点"
+          "title": "People Imbalance Point",
+          "description": "You may give too much or too little to friends, since your star chart's friends area is empty; rebalance by checking in."
         },
         {
-          "description": "木旺克土，脾胃与睡眠是压力晴雨表，请把作息当硬指标管理",
-          "title": "健康压力点"
+          "title": "Health & Stress Point",
+          "description": "You tend to overwork and feel tired, as Saturn in your Vedic 6th house; care for it with regular breaks and sleep."
         },
         {
-          "description": "田宅宫地空，置业与大额长投忌冲动签约，须留足冷静期与现金流",
-          "title": "资源耗损点"
+          "title": "Resource Drain Point",
+          "description": "Money may slip away, as your star chart's property area is empty; plug it by tracking spending weekly."
         }
-      ],
-      "overview": "易出问题的领域有三处三盘共振：关系里谈钱（身宫夫妻宫武曲贪狼对上田宅宫地空）、平级沟通（兄弟宫煞星汇聚对上八字比肩过重）、以及用健康换进度（身弱对上土星六宫的慢性消耗）。这三处都不是能力问题，而是缺少预先定好的规矩，规矩先行，损耗大半可避。",
-      "plain_summary": "最容易出事的是三块：一是冲动花钱和替人担保；二是感情里先掏心、后翻脸，伤人也伤己；三是拼起命来不管身体，小毛病拖成大问题。这三样提前设个底线，能避掉你大半的坑。"
+      ]
     }
   }
 }
