@@ -1110,7 +1110,8 @@ def _perform_local_analysis(chart_data: Dict[str, Any], analysis_type: str) -> D
     dasha_line = ""
     if dasha:
         nak_name, dlord, y0, y1 = dasha
-        dasha_line = f"Your current Vedic period is the {_DASHA_EN.get(dlord, dlord)} period ({y0}–{y1}): {_DASHA_DOMAIN.get(dlord, 'this planet\u2019s themes')} is the main theme of these years"
+        dasha_domain = _DASHA_DOMAIN.get(dlord, "this planet\u2019s themes")
+        dasha_line = f"Your current Vedic period is the {_DASHA_EN.get(dlord, dlord)} period ({y0}–{y1}): {dasha_domain} is the main theme of these years"
     if analysis_type == "personality":
         if dasha:
             extra2.append(f"Your birth star (nakshatra) is {dasha[0]}, ruled by {_DASHA_EN.get(_NAKSHATRAS[[n for n, _ in _NAKSHATRAS].index(dasha[0])][1], '')}: it sets the deep grain of your temperament")

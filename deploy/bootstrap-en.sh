@@ -125,6 +125,11 @@ REACT_APP_API_URL= npm run build
 CADDYFILE=/etc/caddy/Caddyfile
 mkdir -p /var/log/caddy
 touch "$CADDYFILE"
+# the caddy service user must own its log file — if root (e.g. a root-run
+# `caddy validate` or an earlier bootstrap) created it first, caddy fails to
+# start with "permission denied" opening the log writer
+touch /var/log/caddy/access-charttrio.log
+chown caddy:caddy /var/log/caddy/access-charttrio.log 2>/dev/null || true
 # drop our previous block if present (idempotent re-runs)
 sed -i '/# BEGIN CHARTRIO/,/# END CHARTRIO/d' "$CADDYFILE"
 cat >> "$CADDYFILE" <<'CADDY'
