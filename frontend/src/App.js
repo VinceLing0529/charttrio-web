@@ -1,6 +1,7 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { API_BASE } from './config';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
+import { trackPageView } from './utils/metaPixel';
 import { Toaster } from 'react-hot-toast';
 import { Eye, X } from 'lucide-react';
 import HomePage from './components/HomePage';
@@ -18,6 +19,21 @@ import PromptAdminPage from './components/PromptAdminPage';
 import RedemptionCodeAdmin from './components/RedemptionCodeAdmin';
 import ManageAdminPage from './components/ManageAdminPage';
 import './index.css';
+
+// Meta Pixel: the base snippet in index.html fires the initial PageView;
+// this fires one more on every subsequent SPA route change.
+function RouteChangeTracker() {
+    const location = useLocation();
+    const isFirst = useRef(true);
+    useEffect(() => {
+        if (isFirst.current) {
+            isFirst.current = false;
+            return;
+        }
+        trackPageView();
+    }, [location.pathname]);
+    return null;
+}
 
 function App() {
     const [data, setData] = useState(null);
@@ -131,6 +147,7 @@ function App() {
 
     return (
         <Router>
+            <RouteChangeTracker />
             <div className="min-h-screen bg-paper relative flex flex-col overflow-x-hidden scroll-smooth">
                 <Toaster
                     position="top-right"

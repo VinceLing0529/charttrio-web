@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { Link, useSearchParams } from 'react-router-dom';
 import toast from 'react-hot-toast';
 import { API_BASE } from '../config';
+import { trackPurchase } from '../utils/metaPixel';
 
 // Stripe 支付成功回跳页：凭 session_id 向后端取已付费的码（后端核验付款后发放）。
 // 正常路径不再要求用户输码：码暂存 localStorage，自动跳回结果页直达报告生成；
@@ -21,6 +22,10 @@ function PaymentSuccessPage() {
                 const r = await fetch(`${API_BASE}/api/payments/stripe/session/${sessionId}`);
                 const d = await r.json();
                 if (d.code) {
+                    // Backend only issues the code after verifying the payment:
+                    // this is a confirmed purchase (trackPurchase self-guards
+                    // to at most one event per checkout session).
+                    trackPurchase(sessionId);
                     let hasChart = false;
                     try {
                         localStorage.setItem('li_paid_code', d.code);
@@ -29,7 +34,7 @@ function PaymentSuccessPage() {
                     setState({ status: 'paid', code: d.code, hasChart });
                     return;
                 }
-                if (d.status === 'paid') { setState({ status: 'paid', code: null, hasChart: false }); return; }
+                if (d.status === 'paid') { trackPurchase(sessionId); setState({ status: 'paid', code: null, hasChart: false }); return; }
             } catch (e) { /* 网络抖动时继续轮询 */ }
             if (tries < 15) { timer = setTimeout(poll, 2000); }
             else { setState({ status: 'timeout', code: null, hasChart: false }); }

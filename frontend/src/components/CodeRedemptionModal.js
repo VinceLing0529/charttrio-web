@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import toast from 'react-hot-toast';
 import { API_BASE } from '../config';
+import { trackInitiateCheckout } from '../utils/metaPixel';
 
 function CodeRedemptionModal({ isOpen, onClose }) {
     const [stripeEnabled, setStripeEnabled] = useState(false);
@@ -20,6 +21,8 @@ function CodeRedemptionModal({ isOpen, onClose }) {
             const response = await fetch(`${API_BASE}/api/payments/stripe/checkout`, { method: 'POST' });
             if (!response.ok) throw new Error('checkout failed');
             const data = await response.json();
+            // Meta Pixel: user committed to pay and a Checkout session now exists.
+            trackInitiateCheckout();
             window.location.href = data.url;
         } catch (error) {
             console.error('在线支付发起失败:', error);
