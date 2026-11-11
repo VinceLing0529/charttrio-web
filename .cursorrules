@@ -1,0 +1,137 @@
+# LifeInsight-Web 项目进度记录
+
+## 项目概述
+LifeInsight-Web是一个中国传统命理学AI分析系统，支持八字、紫微斗数、印度星盘三大体系的综合分析。
+
+## 当前架构状态 (2024年12月)
+
+### 🏗️ 系统架构
+- **后端**: FastAPI + Python
+- **前端**: React + JavaScript  
+- **AI服务**: Google Gemini API (直接HTTP调用)
+- **数据存储**: JSON文件系统
+- **部署**: 本地开发环境
+
+### 📊 核心功能模块
+
+#### 1. AI报告生成系统 ✅ 完成
+- **四大分析模块**:
+  - `comprehensive_analysis`: 优劣混合分析
+  - `mindmap_presentation`: 思维导图呈现  
+  - `fortune_prediction`: 运势预测报告
+  - `personalized_advice`: 个性化建议
+- **上下文管理**: 完整命盘信息建立与维护
+- **JSON结构化输出**: 标准化的数据格式
+- **批量分析**: 自动生成完整报告
+
+#### 2. 订单管理系统 ✅ 完成
+- **订单号生成**: `AI + 时间戳 + UUID` 格式
+- **报告存储**: `backend/data/reports/` 目录
+- **历史查询**: 支持订单号精确查询
+- **数据持久化**: JSON文件存储完整分析结果
+
+#### 3. 测试开发系统 ✅ 完成
+- **AI测试页面**: 完整的测试界面
+- **双重编辑功能**:
+  - 前端显示编辑 (临时测试)
+  - 后端模板编辑 (永久修改)
+- **实时AI响应**: 始终显示AI原始回答
+- **结构验证**: JSON格式和字段完整性检查
+
+#### 4. 用户界面系统 ✅ 完成
+- **AIReportPage**: 与ExamplePage设计一致的完整界面
+- **四大模块展示**: 对应后端分析结构
+- **响应式设计**: 现代化UI/UX
+- **报告查询**: 订单号查询功能
+
+### 🔧 技术实现要点
+
+#### 后端核心 (`app/api/ai_analysis.py`)
+```python
+# 四大模块配置
+DIMENSIONS_CONFIG = {
+    'comprehensive_analysis': {...},
+    'mindmap_presentation': {...}, 
+    'fortune_prediction': {...},
+    'personalized_advice': {...}
+}
+```
+
+#### 关键API端点
+- `POST /ai/analysis/setup-context`: 上下文建立
+- `POST /ai/analysis/batch-generate`: 批量分析生成
+- `GET /ai/analysis/{order_id}`: 报告查询
+- `POST /test/get-prompts`: 测试prompt获取
+- `POST /test/single-prompt`: 单个prompt测试
+- `GET /test/get-backend-prompt/{key}`: 后端prompt获取
+- `POST /test/update-backend-prompt`: 后端prompt修改
+
+#### Gemini API集成
+- **直接HTTP调用**: 避免Python库依赖冲突
+- **错误处理**: 完善的异常捕获和重试机制
+- **JSON解析**: 统一的响应格式处理
+
+### 🐛 已解决的关键问题
+
+#### 1. JSON解析错误 ✅ 修复
+- **问题**: 前端接收到dict对象而非JSON字符串
+- **解决**: 所有模块返回值统一使用 `json.dumps(result, ensure_ascii=False)`
+
+#### 2. 模块识别错误 ✅ 修复  
+- **问题**: 判断条件过于严格，导致"未知的分析类型"错误
+- **解决**: 使用OR逻辑和多重匹配条件
+
+#### 3. 前后端同步 ✅ 验证
+- **验证**: 前端测试页面与后端DIMENSIONS_CONFIG完全同步
+- **机制**: 通过API动态获取prompt模板
+
+#### 4. 上下文模板大幅扩展 ✅ 完成
+- **改进**: 从基础信息扩展到完整排盘数据 (数据量提升39倍)
+- **内容**: 
+  - 八字: 四柱详析、十神统计、纳音、神煞、大运、真太阳时
+  - 紫微: 十二宫详析、主辅星配置、年干四化、五行局
+  - 印度星盘: 行星位置、轴点信息、岁差系统、宫位分布
+  - 精确信息: 时区、经纬度、农历日期等
+- **效果**: 为AI分析提供极其丰富的命理基础数据
+
+### 📁 关键文件结构
+```
+lifeinsight-web/
+├── backend/
+│   ├── app/api/ai_analysis.py          # 核心分析逻辑
+│   ├── app/api/ai_report.py            # 报告生成API
+│   ├── data/reports/                   # 报告存储目录
+│   └── requirements.txt                # Python依赖
+├── frontend/
+│   ├── src/components/AIReportPage.js  # 主报告页面
+│   ├── src/components/AITestPage.js    # 测试开发页面
+│   └── src/services/api.js             # API调用服务
+└── README_CONTEXT_TEST.md              # 上下文测试文档
+```
+
+### 🚀 启动命令
+```bash
+# 后端启动 (在 backend/ 目录下)
+python -m uvicorn app.main:app --reload --host 0.0.0.0 --port 8000
+
+# 前端启动 (在 frontend/ 目录下)  
+npm start
+```
+
+### 📋 下一步开发计划
+1. **部署优化**: 生产环境配置
+2. **性能优化**: 缓存机制和响应速度
+3. **用户认证**: 登录和权限管理
+4. **数据分析**: 用户使用统计
+5. **UI/UX优化**: 更丰富的交互体验
+
+### ⚠️ 重要注意事项
+- 订单号格式: `AI + YYYYMMDDHHMMSS + UUID前8位`
+- 所有prompt模板使用中文，确保 `ensure_ascii=False`
+- 前端测试页面的"后端编辑"功能会永久修改生产prompt
+- Gemini API调用需要有效的API密钥配置
+
+### 🏆 项目状态
+**当前状态**: ✅ 核心功能完整，系统稳定运行
+**完成度**: 95% (基础功能完成，待优化和扩展)
+**可用性**: ✅ 完全可用，支持完整的AI报告生成和查询流程 

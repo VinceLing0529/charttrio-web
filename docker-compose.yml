@@ -1,0 +1,19 @@
+# LifeInsight 一键部署（VPS + Docker Compose）
+# 用法：cp backend/.env.example backend/.env 并填入自己的 Key（排盘不需要 Key，AI 报告才需要）
+# 然后：docker compose up -d --build ，访问 http://<服务器>:8080
+services:
+  backend:
+    build: ./backend
+    env_file:
+      - path: ./backend/.env
+        required: false
+    # 同域反代下不需要放宽 CORS；前后端分开部署时再经 .env 设置 CORS_ORIGINS
+    restart: unless-stopped
+
+  frontend:
+    build: ./frontend
+    ports:
+      - "8080:80"
+    depends_on:
+      - backend
+    restart: unless-stopped

@@ -1,0 +1,154 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@500;700;900&family=Noto+Sans+SC:wght@400;500;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ============ 生命洞察设计系统：宣纸 · 松烟墨 · 印泥朱砂 ============
+   色彩论证：三色全部采自命理文书本身——宣纸底、松烟墨字、印泥朱砂落款，
+   黛青取自旧籍函套布面，赭金只作细线。压低饱和模拟油墨印纸的质感。
+   结构论证：命盘即方格文书——双线边框（线装书函面）、竖排题签、干支宋体列表，
+   让版式从"命盘"这个内容里长出来，而不是套模板。 */
+
+@layer base {
+    html,
+    body {
+        font-family: 'Noto Sans SC', 'PingFang SC', 'Microsoft YaHei', sans-serif;
+        @apply bg-paper text-ink antialiased;
+        overflow-x: hidden;
+        overflow-y: auto;
+    }
+
+    h1, h2, h3 {
+        font-family: 'Noto Serif SC', 'Songti SC', STSong, SimSun, serif;
+    }
+
+    * {
+        box-sizing: border-box;
+    }
+
+    ::selection {
+        background: #b3402a;
+        color: #fffdf7;
+    }
+}
+
+@layer components {
+    /* 卡片：素笺——纸白、细线、近直角，不用投影堆层 */
+    .card {
+        @apply bg-paper-card rounded border border-line p-6;
+        box-shadow: 0 1px 2px rgba(33, 29, 25, 0.04);
+    }
+
+    .card-hover {
+        @apply transition-colors duration-200 hover:border-accent-300;
+    }
+
+    /* 双线框：线装书函面式样，外粗内细 */
+    .frame-double {
+        border: 2px solid #211d19;
+        outline: 1px solid #211d19;
+        outline-offset: 3px;
+    }
+
+    /* 印章：朱砂方印，白文宋体 */
+    .seal {
+        @apply inline-flex items-center justify-center bg-primary-600 text-paper-card font-serif font-bold rounded-[3px] select-none;
+        box-shadow: inset 0 0 0 1.5px rgba(255, 253, 247, 0.55);
+        letter-spacing: 0.08em;
+    }
+
+    /* 竖排题签 */
+    .v-label {
+        writing-mode: vertical-rl;
+        letter-spacing: 0.35em;
+    }
+
+    .btn-primary {
+        @apply bg-primary-600 hover:bg-primary-700 text-paper-card font-medium py-2.5 px-5 rounded transition-colors duration-200 tracking-wide;
+    }
+
+    .btn-secondary {
+        @apply bg-secondary-600 hover:bg-secondary-700 text-paper-card font-medium py-2.5 px-5 rounded transition-colors duration-200 tracking-wide;
+    }
+
+    .btn-outline {
+        @apply border border-ink/60 text-ink hover:bg-ink hover:text-paper-card font-medium py-2.5 px-5 rounded transition-all duration-200 tracking-wide;
+    }
+
+    .form-input {
+        @apply w-full px-3 py-2 bg-paper-card border border-line rounded focus:outline-none focus:border-primary-500 focus:ring-1 focus:ring-primary-500/40 text-ink placeholder:text-ink-faint;
+    }
+
+    .form-label {
+        @apply block text-sm font-medium text-ink-soft mb-2 tracking-wide;
+    }
+
+    .form-error {
+        @apply text-primary-600 text-sm mt-1;
+    }
+
+    /* 页面底：宣纸平色 */
+    .gradient-bg {
+        @apply bg-paper;
+    }
+
+    .chart-card {
+        @apply bg-paper-card rounded border border-line p-6 transition-colors duration-200 hover:border-accent-300;
+    }
+
+    .loading-spinner {
+        @apply animate-spin rounded-full h-8 w-8 border-2 border-line border-t-primary-600;
+    }
+
+    .mindmap-container {
+        @apply bg-paper-card rounded border border-line p-4 overflow-auto;
+    }
+}
+
+@layer utilities {
+    /* 旧类名保留：渐变字改为朱砂实色，避免全仓引用失效 */
+    .text-gradient {
+        @apply text-primary-600;
+    }
+
+    .shadow-soft {
+        box-shadow: 0 1px 2px rgba(33, 29, 25, 0.05);
+    }
+
+    .shadow-glow {
+        box-shadow: 0 0 0 1px rgba(179, 64, 42, 0.25);
+    }
+
+    .scroll-smooth {
+        scroll-behavior: smooth;
+    }
+
+    .overflow-y-auto {
+        overflow-y: auto;
+    }
+
+    .overflow-x-hidden {
+        overflow-x: hidden;
+    }
+}
+
+.mermaid {
+    @apply bg-paper-card rounded p-4;
+}
+
+@media (max-width: 768px) {
+    .card {
+        @apply p-4;
+    }
+
+    .chart-card {
+        @apply p-4;
+    }
+}
+
+/* 兼容仍在引用的旧动效工具类（AI 测试页等） */
+@keyframes float { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-10px); } }
+@keyframes glow { 0%, 100% { opacity: .55; } 50% { opacity: 1; } }
+.animate-float { animation: float 3s ease-in-out infinite; }
+.animate-glow { animation: glow 2.4s ease-in-out infinite; }
